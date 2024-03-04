@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fd024a2187.js" crossorigin="anonymous"></script>
+
+ <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .inter-font {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings:
+        "slnt" 0;
+    }
+
+    .mulish-font {
+      font-family: "Mulish", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+    }
+    #search-btn {
+      border: 1px solid;
+      background: #797dfc;
+      padding: 5px;
+      width: 120px;
+      border-radius: 37%;
+      color: white;
+    }
+    .cat-search{}
+  </style>
+</head>
+<body class="mulish-font">
+  <header class="container mx-auto w-[1170px] my-[50px] h-[50px] bg-black">
+    
+    <div class="navbar bg-base-100 flex justify-between">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </div>
+          <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Item 1</a></li>
+            <li>
+              <a>Parent</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl"><img src="/images/logo.png"></a>
+      </div>
+      <div>
+        <div class="navbar-center hidden lg:flex gap-5">
+          <ul class="menu menu-horizontal px-3 ">
+            <div class="tooltip mr-[10px]" data-tip="Home">
+              <img src="./images/home.png" alt="" height="50px" width="50px" class="facebook-icon">
+               </div>
+            <div class="tooltip mr-[10px]" data-tip="Edit">
+                <img src="./images/edit.png" alt="" height="50px" width="50px" class="facebook-icon">
+            </div>
+            <div class="tooltip mr-[10px]" data-tip="group">
+              <img src="./images/group.png" alt="" height="50px" width="50px" class="facebook-icon">
+          </div>
+          <div class="tooltip" data-tip="flag">
+            <img src="./images/flag.png" alt="" height="50px" width="50px" class="facebook-icon">
+        </div>
+            
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a class="btn bg-[#797dfc] text-[white]">Sign In</a>
+        </div>
+      </div>
+      
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="baner  lg:w-[1170px] mx-auto h-[550px] bg-contain bg-no-repeat bg-[url('/images/banner.png')] p-[100px]">
+        <div class="flex justify-between">
+          <div>
+                <h1 class="text-[64px] text-[white] font-extrabold">Welcome to the<br><sapn class="text-[#797DFC]">ReTro</sapn> Forum</h1> 
+              <p class="text-[20px] font-medium text-[white]">Share your favorite opinion and win and wp <br>forum coffee mug!</p>
+              
+              <label class="input input-bordered flex items-center gap-2 cat-search">
+                <input type="text" class="grow" placeholder="category name" value="" id="search-value" />
+                <button onclick="handleSearch()" id="search-btn">search</button>
+              </label>
+
+          </div>
+          <div class="py-[50px] px-[30px] bg-[white] rounded-3xl text-[24px]">
+           <ul>
+            <li class="flex justify-between gap-10 lg:mb-[30px]"><span>Registered Users</span> <span>01</span></li>
+            <li class="flex justify-between gap-10 lg:mb-[30px]"><span>Forum</span> <span>05</span></li>
+            <li class="flex justify-between gap-10 lg:mb-[30px]"><span>Topics</span> <span>01</span></li>
+            <li class="flex justify-between gap-10"><span>Replies</span> <span>01</span></li>
+            
+           </ul>
+
+          </div>
+
+        </div>
+      </div>
+      
+      </section>
+      <section>
+        <div class="letest-discuss lg:w-[1170px] mx-auto my-[50px]">
+          <div class="description lg:w-[690px] mx-auto text-center">
+            <h1 class="text-[40px] text-[balck]">Let’s Discuss</h1>
+            <p class="text-[18px] font-normal">Yes, you can run unit tests and view the results directly within the app. The<br> integrated testing features allow for a streamlined .</p>
+            <span  id="loading-spiner" class="loading loading-spinner loading-lg"></span>
+          </div>
+      </section>
+
+      
+      <section class="lg:w-[1170px] mx-auto h-auto mb-[50px]">
+     
+        
+
+          <div class="flex justify-between  gap-6">
+            <div id="post-container" class="coment-details lg:w-[772px] h-[270px] h-auto">
+             
+  
+            </div>
+            <div class="marks-read lg:w-[374px] h-auto p-[25px] bg-[#f3f3f4] shadow-xl rounded-2xl">
+              <div class="flex justify-between py-[10px]">
+                <span>Title</span>
+    
+                <span class="flex justify-between text-[16px] inter-font font-normal"><img src="./images/tikmark.png">Mark as read (4)</span>
+              </div>
+
+              <div class="flex justify-between bg-[white] mb-[10px] rounded-2xl p-[10px] text-[16px] font-semibold">
+                  <div class="comentId">10 Kids Unaware of Their Halloween Costume</div>
+                  <div class="flex justify-between"><span><img src="./images/comment/eye.png"></span><span>560</span></div>
+                 
+              </div>
+              <div class="flex justify-between bg-[white] mb-[10px] rounded-2xl p-[10px] text-[16px] font-semibold">
+                <div>10 Kids Unaware of Their Halloween Costume</div>
+                <div class="flex justify-between"><span><img src="./images/comment/eye.png"></span><span>560</span></div>
+               
+            </div>
+
+            </div>
+          </div>
+
+
+
+          
+  
+  
+          
+  
+        
+      </section>
+      <section>
+
+      
+
+
+      <div class="join-forume  lg:w-[1170px] mx-auto h-[550px] bg-contain bg-no-repeat bg-[url('/images/joain.png')] p-[100px]">
+        <div class="flex justify-between">
+          <div>
+                <h1 class="text-[40px] text-[white] font-extrabold mb-[20px]">Join Our Forum</h1> 
+              <p class="text-[18px] text-[white] font-normal">Share your favorite opinion and win and wp forum coffee mug! Yes, you can<br> run unit tests and view the results directly within the app.</p>
+              
+             <button class="btn btn-primary mt-[20px]">Registered Now</button>
+          </div>
+          
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+
+    </section>
+    <section>
+      <div class="letest-discuss lg:w-[1170px] mx-auto mb-[50px]">
+        <div class="description lg:w-[690px] mx-auto text-center">
+          <h1 class="text-[40px] text-[balck]">Latest Posts</h1>
+          <p class="text-[18px] font-normal">Yes, you can run unit tests and view the results directly within the app. The<br> integrated testing features allow for a streamlined .</p>
+        </div>
+    </section>
+    <section class="lg:w-[1170px] mx-auto h-auto mb-[50px]">
+      <div id="post-Letest" class="grid grid-cols-3 gap-4">
+        
+       
+      </div>
+      
+
+    </section>
+
+
+    <footer class="lg:w-[1440px] mx-auto p-[100px] bg-[#f4f4f5] text-center">
+      <h1 class="text-[36px] font-extrabold">ReTro</h1>
+      <p class="font-normal text-[16px]">We have a lot of good blogs on this site, the developers can take <br>care of their skills and keep the country up to date.</p>
+      <ul class="flex justify-between w-[120px] mx-auto pt-[20px]">
+        <a href="#" class="social-image"><img src="./images/social/1.png" alt="" height="20px" width="20px"></i></a>
+        <a href="#" class="social-image"><img src="./images/social/2.png" alt="" height="10px" width="10px"></i></a>
+        <a href="#" class="social-image"><img src="./images/social/3.png" alt="" height="20px" width="20px"></i></a>
+        <a href="#" class="social-image"><img src="./images/social/4.png" alt="" height="20px" width="20px"></i></a>
+        
+      </ul>
+      <div class="flex flex-col w-[1170px]">
+        <div class="divider"></div>
+      </div>
+      <p class="font-normal text-[16px]">2017, All Rights Reserved.</p>
+    </footer>
+  </main>
+</body>
+<script src="./js/app.js"></script>
+</html>
